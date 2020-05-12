@@ -1,0 +1,225 @@
+html, body, #root, #root > div {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+#root {
+	overflow-y: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#root::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE and Edge */
+#root{
+  -ms-overflow-style: none;
+}
+
+/*Calendar*/
+.calendar, .calendar table{
+	height: 100%;
+}
+.calendar div{
+	overflow-y: scroll;
+	height: 80%;
+}
+
+.calendarRow {
+	height: 15%;
+}
+.calendarWeek{
+	text-align: center;
+}
+.calendarDate{
+	padding: 0;
+	margin: 0;
+	font-size: 0.8em;
+}
+.calendarDay:hover{
+	border: 2px solid lightblue;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.calendarDay {
+	width: 14.28%;
+}
+.calendarDay li{
+	list-style-type: none;
+	margin: 1px;
+	border-radius: 10px;
+	padding: 0.25em;
+	margin-left: 1em;
+}
+.calendarTitle{
+	display: inline-block;
+	width: 210px;
+}
+/*Elements*/
+.left-arrow {
+	border: solid black;
+  	border-width: 0 5px 5px 0;
+  	padding: 7px;
+  	font-size: 0;
+  	display: inline-block;
+  	transform: rotate(135deg);
+  	-webkit-transform: rotate(135deg);
+  	opacity: 0.5;
+}
+.right-arrow {
+	border: solid black;
+  	border-width: 0 5px 5px 0;
+  	padding: 7px;
+  	display: inline-block;
+  	transform: rotate(-45deg);
+  	-webkit-transform: rotate(-45deg);
+  	opacity: 0.5;
+}
+.left-arrow:hover, .right-arrow:hover{
+	opacity: 1;
+}
+.addButton{
+	background-color: lightgreen;
+	height: 36px;
+	color: #fff;
+	border-radius: 100%;
+	width: 36px;
+	line-height: 18px;
+	padding: 0;
+	text-align: center;
+	border-style: solid;
+	opacity: 0.7;
+	outline: none;
+}
+.addButton.focus, .addButton:focus{
+	outline: none;
+	box-shadow: none!important;
+}
+.addButton:hover{
+	opacity: 1;
+}
+.eventStudy{
+	font: #fff;
+	background: #33FF66;
+}
+.eventWork{ 
+	font: #fff;
+	background: #FEA500;
+}
+.eventExercise{
+	font: #fff;
+	background: #FFFF00;
+}
+.eventMeeting{
+	font: #fff;
+	background: #48D1CC;
+}
+.eventOthers{
+	font: #fff;
+	background: #5caceb;
+}
+.eventMore{
+	font-size: 2em;
+	line-height: 0.5em;
+	margin-left: 0.5em!important;
+}
+
+/*Timeline*/
+.timeline{
+    margin:0 10%;
+    overflow: hidden;
+    background-color: RGBA(233,233,233, 0.9);
+}
+.timeline ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top:0;
+}
+.timeline ul:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border:1px solid #000;
+    position: absolute;
+    top:15px;
+    left: 90px;
+}
+.timeline ul li{
+    position: relative;
+    padding: 10px 0;
+    line-height: 20px;
+    background-color: RGBA(233,233,233, 0.9);
+}
+.timeline ul li:hover{
+	background-color: RGBA(255,255,255, 0.7);
+}
+.timeline ul li div{
+	display: inline-block;
+	padding: 0 0 5px 110px;
+}
+.timeline ul li .time{
+	width: 80px;
+	padding-left: 0;
+	top: 0;
+	text-align: center;
+}
+.timeline ul li .title{
+	padding-left: 30px;
+}
+.timeline ul li span:before{
+   	content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff6d6d;
+    position: absolute;
+    top: 15px;
+    left: 86px;
+}
+
+.quotes{
+	position: relative;
+	font-family: 'Sanchez', serif;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.quotes blockquote{
+	position: relative;
+	font-family: 'Sanchez', serif;
+	font-size: 2em;
+	border-left: 10px solid #ccc;
+	background: #f9f9f9;
+	display: inline-block;
+	padding: 0 1.5em;
+	z-index: 2;
+}
+.quotes footer{
+	font-size: 0.7em;
+	color: #666;
+	float: right;
+	z-index: 2;
+}
+.quotes blockquote::before{
+	content: "\201C";
+	position: absolute;
+	opacity: 0.3;
+	font-size: 3.5em;
+	line-height: 0.5em;
+	left: 0.3em;
+	z-index: 1;
+}
+.quotes blockquote::after{
+	content: "\201D";
+	position: absolute;
+	opacity: 0.3;
+	font-size: 3.5em;
+	line-height: 0.5em;
+	right: 0.3em;
+	z-index: 1;
+}
